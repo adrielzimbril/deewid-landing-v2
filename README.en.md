@@ -2,7 +2,7 @@
 
 Second public version of Deewid, a more complete static front-end built with Gulp, Tailwind CSS, and reusable HTML partials.
 
-This V2 extends V1 with a cleaner build pipeline, a richer landing page, a dedicated pricing page, and two additional storefront state pages:
+This V2 includes a richer landing page, a dedicated pricing page, and two storefront state pages:
 
 - `store-not-exist`
 - `store-unavailable`
@@ -13,11 +13,11 @@ This V2 extends V1 with a cleaner build pipeline, a richer landing page, a dedic
 
 ## Overview
 
-- static ecommerce landing page
-- dedicated pricing page
-- storefront state pages
+- Static ecommerce landing page
+- Dedicated pricing page
+- Storefront state pages
 - Gulp pipeline for final site generation
-- compatible with GitHub Pages through static output
+- Compatible with GitHub Pages through static output
 
 ## Stack
 
@@ -50,8 +50,8 @@ The final site is generated in `dist/`.
   - Repo: `https://github.com/adrielzimbril/deewid-landing-v2`
   - Preview: `https://adrielzimbril.github.io/deewid-landing-v2/`
 - `deewid-landing-v3-laravel`
-  - Planned repo: `https://github.com/adrielzimbril/deewid-landing-v3-laravel`
-  - Preview: not applicable
+  - Repo: `https://github.com/adrielzimbril/deewid-landing-v3-laravel`
+  - Live app: `https://deewid-landing-v3-laravel.adrielzimbril.com/`
 
 ## Maintainer
 
