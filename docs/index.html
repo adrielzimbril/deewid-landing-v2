@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>Landing V2 | Deewid</title>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta content="Deewid is a static ecommerce front-end built for online stores, storefront communication, pricing pages, and branded fallback pages."
+		  name="description"/>
+	<meta content="Oricodes" name="author"/>
+
+	<link href="assets/images/favicon.ico" rel="shortcut icon">
+
+	<link href="assets/libs/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css">
+
+	<link href="assets/css/style.min.css" rel="stylesheet" type="text/css">
+
+	<link href="assets/css/icons.min.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<header class="light fixed top-0 inset-x-0 flex items-center z-40 w-full lg:bg-transparent bg-white transition-all py-5"
+		id="navbar">
+	<div class="container p-0">
+		<nav class="flex items-center">
+			<a href="index.html">
+				<img alt="Logo Dark" class="h-8 logo-dark" src="assets/images/logo-dark.png">
+				<img alt="Logo Light" class="h-8 logo-light" src="assets/images/logo-light.png">
+			</a>
+
+			<div class="hidden lg:block mx-auto">
+				<ul class="navbar-nav flex gap-x-3 items-center justify-center">
+					<li class="nav-item">
+						<a class="nav-link" href="index.html">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="pricing.html">Pricing</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="store-not-exist.html">Store Not Found</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="store-unavailable.html">Store Unavailable</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="hidden lg:flex items-center ms-3">
+				<a class="px-4 py-2" href="https://www.oricodes.com/" target="_blank">Oricodes</a>
+
+				<a class="bg-secondary px-6 py-4 rounded inline-flex items-center text-sm"
+				   href="https://www.oricodes.com/"
+				   target="_blank">Launch with Deewid</a>
+			</div>
+
+			<div class="lg:hidden flex items-center ms-auto px-2.5">
+				<button data-fc-target="mobileMenu" data-fc-type="offcanvas" type="button">
+					<i class="fa-solid fa-bars text-2xl text-slate-700"></i>
+				</button>
+			</div>
+		</nav>
+	</div>
+</header>
+
+
+<div class="fc-offcanvas-open:translate-x-0 translate-x-full fixed top-0 end-0 transition-all duration-200 transform h-full w-full max-w-md z-50 bg-white border-s hidden"
+	 id="mobileMenu">
+	<div class="flex flex-col h-full divide-y-2 divide-gray-200">
+		<div class="p-6 flex items-center justify-between">
+			<a href="index.html">
+				<img alt="Logo" class="h-8" src="assets/images/logo-dark.png">
+			</a>
+
+			<button class="flex items-center px-2" data-fc-dismiss>
+				<i class="fa-solid fa-xmark text-xl"></i>
+			</button>
+		</div>
+
+		<div class="p-6 overflow-y-scroll h-full">
+			<ul class="navbar-nav flex flex-col gap-2" data-fc-type="accordion">
+				<li class="nav-item">
+					<a class="nav-link" href="index.html">Home</a>
+				</li>
+
+				<li class="nav-item">
+					<a class="nav-link" href="pricing.html">Pricing</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="store-not-exist.html">Store Not Found</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="store-unavailable.html">Store Unavailable</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="p-6 flex items-center justify-center">
+			<a class="bg-secondary w-full p-3 rounded flex items-center justify-center text-sm mr-2"
+			   href="https://www.oricodes.com/"
+			   target="_blank">Oricodes</a>
+			<a class="bg-secondary w-full p-3 rounded flex items-center justify-center text-sm"
+			   href="https://www.oricodes.com/"
+			   target="_blank">Launch with Deewid</a>
+		</div>
+	</div>
+</div>
+
+
+<section class="pt-36 pb-20">
+	<div class="container lg:bg-light rounded-xl lg:py-20 py-10">
+		<div class="grid lg:grid-cols-6 grid-cols-1 justify-between items-center gap-8">
+			<div class="lg:order-1 order-2 lg:col-span-3">
+				<span class="text-sm bg-primary/10 text-primary rounded-full px-3 py-1">Deewid V2</span>
+				<h1 class="lg:text-7xl md:text-6xl text-4xl font-semibold lg:bg-gradient-to-b lg:from-primary lg:to-primary/70 lg:bg-clip-text lg:text-transparent text-primary mt-4 mb-7">
+					A more complete ecommerce front-end for Deewid
+				</h1>
+				<p class="text-slate-600 leading-7">
+					Deewid Landing V2 expands the first version with a richer presentation layer, a dedicated pricing page, and reusable storefront state pages for unavailable or missing shops.
+				</p>
+				<div class="flex flex-wrap items-center mt-6 gap-4">
+					<a class="py-3 px-6 rounded bg-secondary focus:outline focus:outline-primary/50" href="pricing.html">View pricing</a>
+					<a class="py-3 px-6 rounded border border-slate-300" href="store-unavailable.html">Store fallback pages</a>
+				</div>
+			</div>
+			<div class="lg:order-2 order-first lg:col-span-3">
+				<div class="relative">
+					<img alt="Deewid storefront" src="assets/images/hero/hero.png">
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="py-6">
+	<div class="container">
+		<div class="text-center">
+			<span class="text-sm bg-primary/10 text-primary rounded-full px-3 py-1">Structure</span>
+			<h2 class="text-3xl/tight font-medium mt-3 mb-4">Built for storefront communication</h2>
+			<p class="text-slate-500 max-w-3xl mx-auto">
+				This version is designed for ecommerce teams that need clearer product storytelling, stronger pricing communication, and dedicated pages for edge cases around store access.
+			</p>
+		</div>
+	</div>
+</section>
+
+<section class="pt-16 sm:pt-24">
+	<div class="container rounded-[1.5rem] bg-light">
+		<div class="py-16 sm:py-20">
+			<div class="grid lg:grid-cols-2 grid-cols-1 2xl:gap-24 gap-10 items-center">
+				<div class="order-2 lg:order-1">
+					<span class="text-sm bg-primary/10 text-primary rounded-full px-3 py-1">Storefront</span>
+					<h2 class="text-5xl/tight font-medium mt-3 mb-4">Landing pages that stay conversion-focused</h2>
+					<p class="text-slate-500">
+						Use Deewid V2 to present your offer with cleaner hierarchy, stronger calls to action, and a structure that feels more production-ready than the first version.
+					</p>
+					<br>
+					<p class="text-slate-500">
+						It also includes dedicated storefront state pages so missing or unavailable stores still produce a branded experience instead of a dead end.
+					</p>
+				</div>
+				<div class="order-1 lg:order-2">
+					<img alt="dashboard" src="assets/images/features/hero-dashboard-1.png">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="py-16 sm:py-20">
+			<div class="grid lg:grid-cols-7 grid-cols-1 items-center lg:gap-8 gap-6">
+				<div class="relative lg:col-span-3">
+					<img class="mx-auto" alt="analytics" src="assets/images/features/hero-dashboard.png">
+				</div>
+				<div class="lg:col-span-4 lg:ps-12">
+					<h2 class="text-5xl/tight font-medium mt-3 mb-6">Key capabilities in this version</h2>
+					<div class="grid sm:grid-cols-2 grid-cols-1 gap-10">
+						<div><h4 class="text-base mt-3 mb-2">Richer landing structure</h4><p class="text-slate-500">More sections and better progression than V1.</p></div>
+						<div><h4 class="text-base mt-3 mb-2">Dedicated pricing page</h4><p class="text-slate-500">Separate pricing communication for clearer offer comparison.</p></div>
+						<div><h4 class="text-base mt-3 mb-2">Store state pages</h4><p class="text-slate-500">Branded fallbacks for missing or unavailable shops.</p></div>
+						<div><h4 class="text-base mt-3 mb-2">Reusable partials</h4><p class="text-slate-500">HTML partials keep the front-end easier to evolve.</p></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="py-16 sm:py-24">
+	<div class="container">
+		<div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
+			<div class="bg-light rounded-xl p-8"><span class="text-sm bg-primary/10 text-primary rounded-full px-3 py-1">Versioning</span><h3 class="text-2xl font-medium mt-4 mb-3">Connected to V1 and V3</h3><p class="text-slate-500">V2 sits between the lightweight landing in V1 and the future Laravel application in V3.</p></div>
+			<div class="bg-light rounded-xl p-8"><span class="text-sm bg-primary/10 text-primary rounded-full px-3 py-1">Fallbacks</span><h3 class="text-2xl font-medium mt-4 mb-3">Better edge-case UX</h3><p class="text-slate-500">Missing stores and temporarily unavailable stores still get dedicated public pages.</p></div>
+			<div class="bg-light rounded-xl p-8"><span class="text-sm bg-primary/10 text-primary rounded-full px-3 py-1">Publishing</span><h3 class="text-2xl font-medium mt-4 mb-3">Static-hosting friendly</h3><p class="text-slate-500">The project builds to plain static files, which keeps GitHub Pages deployment straightforward.</p></div>
+		</div>
+	</div>
+</section>
+
+<section class="py-16 sm:py-24">
+	<div class="container bg-light rounded-xl p-10 text-center">
+		<span class="text-sm bg-primary/10 text-primary rounded-full px-3 py-1">Next steps</span>
+		<h2 class="text-4xl/tight font-medium mt-3 mb-4">Explore the full Deewid V2 surface</h2>
+		<p class="text-slate-500 max-w-2xl mx-auto">Review the pricing page and the two store-state pages that will later inform the Laravel version.</p>
+		<div class="flex flex-wrap justify-center gap-4 mt-6">
+			<a class="py-3 px-6 rounded bg-secondary" href="pricing.html">Pricing</a>
+			<a class="py-3 px-6 rounded border border-slate-300" href="store-not-exist.html">Store not found</a>
+			<a class="py-3 px-6 rounded border border-slate-300" href="store-unavailable.html">Store unavailable</a>
+		</div>
+	</div>
+</section>
+
+﻿<footer class="relative">
+	<div class="container bg-light">
+		<div class="py-6 border-t">
+			<div class="text-center gap-6">
+				<p>
+					&copy;
+					<script>document.write(new Date().getFullYear())</script>
+					,
+					Open-source Deewid front-end maintained by <a class="text-slate-800 hover:text-primary transition-all" href="https://www.oricodes.com/">Oricodes</a>.
+				</p>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<button class="fixed text-sm rounded-full z-10 bottom-5 end-5 h-9 w-9 text-center bg-primary/20 text-primary flex justify-center items-center"
+		data-toggle="back-to-top">
+	<i class="fa-solid fa-arrow-up text-base"></i>
+</button>
+<script src="assets/libs/@frostui/tailwindcss/frostui.js"></script>
+
+<script src="assets/libs/swiper/swiper-bundle.min.js"></script>
+
+<script src="assets/js/theme.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>Store Unavailable | Deewid</title>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta content="Deewid is a static ecommerce front-end built for online stores, storefront communication, pricing pages, and branded fallback pages."
+		  name="description"/>
+	<meta content="Oricodes" name="author"/>
+
+	<link href="assets/images/favicon.ico" rel="shortcut icon">
+
+	<link href="assets/libs/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css">
+
+	<link href="assets/css/style.min.css" rel="stylesheet" type="text/css">
+
+	<link href="assets/css/icons.min.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<header class="light fixed top-0 inset-x-0 flex items-center z-40 w-full lg:bg-transparent bg-white transition-all py-5"
+		id="navbar">
+	<div class="container p-0">
+		<nav class="flex items-center">
+			<a href="index.html">
+				<img alt="Logo Dark" class="h-8 logo-dark" src="assets/images/logo-dark.png">
+				<img alt="Logo Light" class="h-8 logo-light" src="assets/images/logo-light.png">
+			</a>
+
+			<div class="hidden lg:block mx-auto">
+				<ul class="navbar-nav flex gap-x-3 items-center justify-center">
+					<li class="nav-item">
+						<a class="nav-link" href="index.html">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="pricing.html">Pricing</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="store-not-exist.html">Store Not Found</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="store-unavailable.html">Store Unavailable</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="hidden lg:flex items-center ms-3">
+				<a class="px-4 py-2" href="https://www.oricodes.com/" target="_blank">Oricodes</a>
+
+				<a class="bg-secondary px-6 py-4 rounded inline-flex items-center text-sm"
+				   href="https://www.oricodes.com/"
+				   target="_blank">Launch with Deewid</a>
+			</div>
+
+			<div class="lg:hidden flex items-center ms-auto px-2.5">
+				<button data-fc-target="mobileMenu" data-fc-type="offcanvas" type="button">
+					<i class="fa-solid fa-bars text-2xl text-slate-700"></i>
+				</button>
+			</div>
+		</nav>
+	</div>
+</header>
+
+
+<div class="fc-offcanvas-open:translate-x-0 translate-x-full fixed top-0 end-0 transition-all duration-200 transform h-full w-full max-w-md z-50 bg-white border-s hidden"
+	 id="mobileMenu">
+	<div class="flex flex-col h-full divide-y-2 divide-gray-200">
+		<div class="p-6 flex items-center justify-between">
+			<a href="index.html">
+				<img alt="Logo" class="h-8" src="assets/images/logo-dark.png">
+			</a>
+
+			<button class="flex items-center px-2" data-fc-dismiss>
+				<i class="fa-solid fa-xmark text-xl"></i>
+			</button>
+		</div>
+
+		<div class="p-6 overflow-y-scroll h-full">
+			<ul class="navbar-nav flex flex-col gap-2" data-fc-type="accordion">
+				<li class="nav-item">
+					<a class="nav-link" href="index.html">Home</a>
+				</li>
+
+				<li class="nav-item">
+					<a class="nav-link" href="pricing.html">Pricing</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="store-not-exist.html">Store Not Found</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="store-unavailable.html">Store Unavailable</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="p-6 flex items-center justify-center">
+			<a class="bg-secondary w-full p-3 rounded flex items-center justify-center text-sm mr-2"
+			   href="https://www.oricodes.com/"
+			   target="_blank">Oricodes</a>
+			<a class="bg-secondary w-full p-3 rounded flex items-center justify-center text-sm"
+			   href="https://www.oricodes.com/"
+			   target="_blank">Launch with Deewid</a>
+		</div>
+	</div>
+</div>
+
+
+<section class="pt-36 pb-20 overflow-hidden">
+	<div class="container rounded-xl items-center relative py-16 sm:py-24 bg-light overflow-hidden text-center max-w-4xl">
+		<span class="text-sm bg-primary/10 text-primary rounded-full px-3 py-1">Store state</span>
+		<h1 class="text-4xl md:text-5xl font-semibold mt-4 mb-6">This store is temporarily unavailable</h1>
+		<p class="text-slate-500 max-w-2xl mx-auto">The storefront exists, but it is currently unavailable. This fallback page gives the public a cleaner status message while preserving Deewid branding and navigation.</p>
+		<div class="inline-flex mt-8 gap-4 flex-wrap justify-center">
+			<a class="py-3 px-6 rounded bg-secondary" href="index.html">Return to Deewid</a>
+			<a class="py-3 px-6 rounded border border-slate-300" href="pricing.html">Review plans</a>
+		</div>
+	</div>
+</section>
+
+<section class="pb-20">
+	<div class="container grid md:grid-cols-2 grid-cols-1 gap-6">
+		<div class="bg-light rounded-xl p-8"><h2 class="text-2xl font-medium mb-4">Owner context</h2><p class="text-slate-500">In the future Laravel flow, this state can be extended with owner-only recovery actions, domain checks, or maintenance messaging.</p></div>
+		<div class="bg-light rounded-xl p-8"><h2 class="text-2xl font-medium mb-4">Public context</h2><p class="text-slate-500">For visitors, it explains that the store is real but currently offline, instead of leaving them on a generic browser or server error page.</p></div>
+	</div>
+</section>
+
+﻿<footer class="relative">
+	<div class="container bg-light">
+		<div class="py-6 border-t">
+			<div class="text-center gap-6">
+				<p>
+					&copy;
+					<script>document.write(new Date().getFullYear())</script>
+					,
+					Open-source Deewid front-end maintained by <a class="text-slate-800 hover:text-primary transition-all" href="https://www.oricodes.com/">Oricodes</a>.
+				</p>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<button class="fixed text-sm rounded-full z-10 bottom-5 end-5 h-9 w-9 text-center bg-primary/20 text-primary flex justify-center items-center"
+		data-toggle="back-to-top">
+	<i class="fa-solid fa-arrow-up text-base"></i>
+</button>
+<script src="assets/libs/@frostui/tailwindcss/frostui.js"></script>
+
+<script src="assets/libs/swiper/swiper-bundle.min.js"></script>
+
+<script src="assets/js/theme.min.js"></script>
+</body>
+</html>

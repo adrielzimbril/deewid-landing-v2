@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	@@include("partials/title-meta.html", {"title": "Store Not Found"})
+	@@include('./partials/head-css.html')
+</head>
+<body>
+
+@@include('./partials/navbar.html', {"link-color": "light"})
+
+<section class="pt-36 pb-20 overflow-hidden">
+	<div class="container rounded-xl items-center relative py-16 sm:py-24 bg-light overflow-hidden text-center max-w-4xl">
+		<span class="text-sm bg-primary/10 text-primary rounded-full px-3 py-1">Store state</span>
+		<h1 class="text-4xl md:text-5xl font-semibold mt-4 mb-6">This store does not exist</h1>
+		<p class="text-slate-500 max-w-2xl mx-auto">The requested Deewid storefront could not be found. This page is part of the V2 public front-end and exists to keep the experience branded even when a store slug is missing or invalid.</p>
+		<div class="inline-flex mt-8 gap-4 flex-wrap justify-center">
+			<a class="py-3 px-6 rounded bg-secondary" href="index.html">Return to Deewid</a>
+			<a class="py-3 px-6 rounded border border-slate-300" href="https://www.oricodes.com/" target="_blank">Launch your own store</a>
+		</div>
+	</div>
+</section>
+
+<section class="pb-20">
+	<div class="container grid md:grid-cols-2 grid-cols-1 gap-6">
+		<div class="bg-light rounded-xl p-8"><h2 class="text-2xl font-medium mb-4">What this page is for</h2><p class="text-slate-500">Use this state when a storefront URL does not resolve to an active shop. It turns a dead route into a clearer branded message.</p></div>
+		<div class="bg-light rounded-xl p-8"><h2 class="text-2xl font-medium mb-4">Where it belongs</h2><p class="text-slate-500">This fallback page will later inform both the polished static V2 ecosystem and the Laravel application layer in V3.</p></div>
+	</div>
+</section>
+
+@@include('./partials/footer.html')
+@@include('./partials/back-to-top.html')
+@@include('./partials/footer-scripts.html')
+</body>
+</html>

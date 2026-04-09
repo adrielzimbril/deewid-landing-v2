@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	@@include("partials/title-meta.html", {"title": "Pricing"})
+	@@include('./partials/head-css.html')
+</head>
+<body>
+
+@@include('./partials/navbar.html', {"link-color": "light"})
+
+<section class="pt-36 pb-20">
+	<div class="container text-center">
+		<span class="text-sm bg-primary/10 text-primary rounded-full px-3 py-1">Pricing</span>
+		<h1 class="text-5xl/tight md:text-6xl font-semibold mt-4 mb-4">Simple pricing for ecommerce communication</h1>
+		<p class="text-slate-500 max-w-3xl mx-auto">Deewid V2 focuses on frontend presentation, so these plans are positioned as showcase tiers for landing-page scope and storefront presentation.</p>
+	</div>
+</section>
+
+<section class="pb-20">
+	<div class="container grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6">
+		<div class="rounded-xl bg-light p-8 flex flex-col"><h3 class="text-2xl font-medium">Starter</h3><p class="text-slate-500 mt-2">For simple storefront launches</p><div class="text-5xl font-semibold mt-6">$0</div><p class="text-slate-500 mt-2">/ month</p><ul class="mt-6 space-y-3 text-slate-600"><li>Single landing page</li><li>Core hero and CTA sections</li><li>Basic storefront messaging</li></ul><a class="mt-auto py-3 px-6 rounded bg-secondary text-center mt-8" href="index.html">Choose starter</a></div>
+		<div class="rounded-xl bg-light p-8 flex flex-col"><h3 class="text-2xl font-medium">Growth</h3><p class="text-slate-500 mt-2">For richer product communication</p><div class="text-5xl font-semibold mt-6">$29</div><p class="text-slate-500 mt-2">/ month</p><ul class="mt-6 space-y-3 text-slate-600"><li>Dedicated pricing page</li><li>Extended landing sections</li><li>Improved storefront framing</li></ul><a class="mt-auto py-3 px-6 rounded bg-secondary text-center mt-8" href="index.html">Choose growth</a></div>
+		<div class="rounded-xl bg-light p-8 flex flex-col"><h3 class="text-2xl font-medium">Scale</h3><p class="text-slate-500 mt-2">For active storefront campaigns</p><div class="text-5xl font-semibold mt-6">$79</div><p class="text-slate-500 mt-2">/ month</p><ul class="mt-6 space-y-3 text-slate-600"><li>Fallback store pages</li><li>Reusable front-end sections</li><li>Stronger deployment-ready structure</li></ul><a class="mt-auto py-3 px-6 rounded bg-secondary text-center mt-8" href="store-unavailable.html">See fallback pages</a></div>
+		<div class="rounded-xl bg-light p-8 flex flex-col"><h3 class="text-2xl font-medium">Premium</h3><p class="text-slate-500 mt-2">For pre-application polish</p><div class="text-5xl font-semibold mt-6">$149</div><p class="text-slate-500 mt-2">/ month</p><ul class="mt-6 space-y-3 text-slate-600"><li>Complete V2 front-end package</li><li>Cross-version consistency</li><li>Preparation for Laravel migration</li></ul><a class="mt-auto py-3 px-6 rounded bg-secondary text-center mt-8" href="https://www.oricodes.com/" target="_blank">Contact Oricodes</a></div>
+	</div>
+</section>
+
+<section class="pb-20">
+	<div class="container bg-light rounded-xl p-10">
+		<div class="grid lg:grid-cols-2 grid-cols-1 gap-8 items-center">
+			<div>
+				<span class="text-sm bg-primary/10 text-primary rounded-full px-3 py-1">Version map</span>
+				<h2 class="text-4xl/tight font-medium mt-4 mb-4">How V2 fits into the Deewid system</h2>
+				<p class="text-slate-500">V1 is the lightweight static entry point. V2 is the richer static front-end. V3 will absorb the important patterns into the Laravel application layer.</p>
+			</div>
+			<div class="grid sm:grid-cols-2 grid-cols-1 gap-4">
+				<a class="rounded-xl border border-slate-200 p-6 block hover:border-primary" href="https://github.com/adrielzimbril/deewid-landing-v1" target="_blank"><strong>V1 repo</strong><br><span class="text-slate-500">Static baseline</span></a>
+				<a class="rounded-xl border border-slate-200 p-6 block hover:border-primary" href="store-not-exist.html"><strong>Store not found</strong><br><span class="text-slate-500">Fallback page</span></a>
+				<a class="rounded-xl border border-slate-200 p-6 block hover:border-primary" href="store-unavailable.html"><strong>Store unavailable</strong><br><span class="text-slate-500">Fallback page</span></a>
+				<a class="rounded-xl border border-slate-200 p-6 block hover:border-primary" href="https://github.com/adrielzimbril/deewid-landing-v3-laravel" target="_blank"><strong>V3 repo</strong><br><span class="text-slate-500">Laravel target</span></a>
+			</div>
+		</div>
+	</div>
+</section>
+
+@@include('./partials/footer.html')
+@@include('./partials/back-to-top.html')
+@@include('./partials/footer-scripts.html')
+</body>
+</html>

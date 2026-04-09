@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	@@include("partials/title-meta.html", {"title": "Store Unavailable"})
+	@@include('./partials/head-css.html')
+</head>
+<body>
+
+@@include('./partials/navbar.html', {"link-color": "light"})
+
+<section class="pt-36 pb-20 overflow-hidden">
+	<div class="container rounded-xl items-center relative py-16 sm:py-24 bg-light overflow-hidden text-center max-w-4xl">
+		<span class="text-sm bg-primary/10 text-primary rounded-full px-3 py-1">Store state</span>
+		<h1 class="text-4xl md:text-5xl font-semibold mt-4 mb-6">This store is temporarily unavailable</h1>
+		<p class="text-slate-500 max-w-2xl mx-auto">The storefront exists, but it is currently unavailable. This fallback page gives the public a cleaner status message while preserving Deewid branding and navigation.</p>
+		<div class="inline-flex mt-8 gap-4 flex-wrap justify-center">
+			<a class="py-3 px-6 rounded bg-secondary" href="index.html">Return to Deewid</a>
+			<a class="py-3 px-6 rounded border border-slate-300" href="pricing.html">Review plans</a>
+		</div>
+	</div>
+</section>
+
+<section class="pb-20">
+	<div class="container grid md:grid-cols-2 grid-cols-1 gap-6">
+		<div class="bg-light rounded-xl p-8"><h2 class="text-2xl font-medium mb-4">Owner context</h2><p class="text-slate-500">In the future Laravel flow, this state can be extended with owner-only recovery actions, domain checks, or maintenance messaging.</p></div>
+		<div class="bg-light rounded-xl p-8"><h2 class="text-2xl font-medium mb-4">Public context</h2><p class="text-slate-500">For visitors, it explains that the store is real but currently offline, instead of leaving them on a generic browser or server error page.</p></div>
+	</div>
+</section>
+
+@@include('./partials/footer.html')
+@@include('./partials/back-to-top.html')
+@@include('./partials/footer-scripts.html')
+</body>
+</html>
