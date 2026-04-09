@@ -1,34 +1,82 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+
 <head>
-	@@include("partials/title-meta.html", {"title": "Store Not Found"})
-	@@include('./partials/head-css.html')
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+<meta content="Deewid storefront status page." name="description">
+<meta content="Oricodes" name="author">
+
+<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+
+<title>Deewid | Store Not Found</title>
+
+<!-- STYLES -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+
+<link href="assets/css/style.min.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+<!--[if lt IE 9]> <script type="text/javascript" src="js/modernizr.custom.js"></script> <![endif]-->
+<!-- /STYLES -->
+
 </head>
+
 <body>
+<section
+		class="py-16 sm:py-24 overflow-hidden">
 
-@@include('./partials/navbar.html', {"link-color": "light"})
+	<div class="container rounded-xl items-center relative py-16 sm:py-26 bg-light overflow-hidden">
+		<div class="max-w-3xl mx-auto">
+			<div class="text-center">
+				<div class="lg:col-span-1">
+					<div class="relative inline-flex mt-6">
+						<a
+								class="py-1 px-6 mr-2 rounded-full text-sm bg-colorCodGray/10 focus:outline focus:outline-primary/50 transition-all duration-500"
+								href="https://www.oricodes.com/" target="_blank"> Create your online store, sell easily
+							<i class="fa-solid fa-arrow-right ms-2"></i>
+						</a>
+					</div>
 
-<section class="pt-36 pb-20 overflow-hidden">
-	<div class="container rounded-xl items-center relative py-16 sm:py-24 bg-light overflow-hidden text-center max-w-4xl">
-		<span class="text-sm bg-primary/10 text-primary rounded-full px-3 py-1">Store state</span>
-		<h1 class="text-4xl md:text-5xl font-semibold mt-4 mb-6">This store does not exist</h1>
-		<p class="text-slate-500 max-w-2xl mx-auto">The requested Deewid storefront could not be found. This page is part of the V2 public front-end and exists to keep the experience branded even when a store slug is missing or invalid.</p>
-		<div class="inline-flex mt-8 gap-4 flex-wrap justify-center">
-			<a class="py-3 px-6 rounded bg-secondary" href="index.html">Return to Deewid</a>
-			<a class="py-3 px-6 rounded border border-slate-300" href="https://www.oricodes.com/" target="_blank">Launch your own store</a>
+					<h4 class="text-4xl font-semibold mt-4 mb-6">This store does not exist.</h4>
+
+					<p class="text-sm">
+						The storefront you requested could not be found. Use this branded fallback state to guide visitors back to Deewid or to the merchant onboarding flow.
+					</p>
+
+					<div class="inline-flex mt-6">
+						<a
+								class="py-1 px-4 mr-2 rounded-full border border-primary bg-primary text-white hover:shadow-lg hover:shadow-primary/20 focus:outline focus:outline-primary/50 transition-all duration-500"
+								href="https://www.oricodes.com/" target="_blank"> Launch with Deewid
+							<i class="fa-solid fa-arrow-right ms-2"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+
 		</div>
 	</div>
 </section>
 
-<section class="pb-20">
-	<div class="container grid md:grid-cols-2 grid-cols-1 gap-6">
-		<div class="bg-light rounded-xl p-8"><h2 class="text-2xl font-medium mb-4">What this page is for</h2><p class="text-slate-500">Use this state when a storefront URL does not resolve to an active shop. It turns a dead route into a clearer branded message.</p></div>
-		<div class="bg-light rounded-xl p-8"><h2 class="text-2xl font-medium mb-4">Where it belongs</h2><p class="text-slate-500">This fallback page will later inform both the polished static V2 ecosystem and the Laravel application layer in V3.</p></div>
+<section class="mt-20 mb-10">
+	<div class="container">
+		<div class="relative text-center">
+
+			<div class="inline-flex mt-6">
+				<a
+						class="text-sm font-medium py-1 px-6 mr-2 rounded-full shadow focus:outline focus:outline-primary/50 transition-all duration-500"
+						href="https://www.oricodes.com/" target="_blank"> Powered by Deewid
+					<i class="fa-solid fa-arrow-right ms-2"></i>
+				</a>
+			</div>
+		</div>
 	</div>
 </section>
-
-@@include('./partials/footer.html')
-@@include('./partials/back-to-top.html')
-@@include('./partials/footer-scripts.html')
 </body>
 </html>

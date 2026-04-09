@@ -1,152 +1,105 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+
 <head>
-	<meta charset="utf-8"/>
-	<title>Store Unavailable | Deewid</title>
-	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-	<meta content="Deewid is a static ecommerce front-end built for online stores, storefront communication, pricing pages, and branded fallback pages."
-		  name="description"/>
-	<meta content="Oricodes" name="author"/>
 
-	<link href="assets/images/favicon.ico" rel="shortcut icon">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 
-	<link href="assets/libs/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css">
+<meta content="Deewid storefront status page." name="description">
+<meta content="Oricodes" name="author">
 
-	<link href="assets/css/style.min.css" rel="stylesheet" type="text/css">
+<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
 
-	<link href="assets/css/icons.min.css" rel="stylesheet" type="text/css">
+<title>Deewid | Store Unavailable</title>
+
+<!-- STYLES -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+
+<link href="assets/css/style.min.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+<!--[if lt IE 9]> <script type="text/javascript" src="js/modernizr.custom.js"></script> <![endif]-->
+<!-- /STYLES -->
+
 </head>
+
 <body>
+<section
+		class="py-16 sm:py-24 overflow-hidden">
 
-<header class="light fixed top-0 inset-x-0 flex items-center z-40 w-full lg:bg-transparent bg-white transition-all py-5"
-		id="navbar">
-	<div class="container p-0">
-		<nav class="flex items-center">
-			<a href="index.html">
-				<img alt="Logo Dark" class="h-8 logo-dark" src="assets/images/logo-dark.png">
-				<img alt="Logo Light" class="h-8 logo-light" src="assets/images/logo-light.png">
-			</a>
+	<div class="container rounded-xl items-center relative py-16 sm:py-26 bg-light overflow-hidden">
+		<div class="max-w-3xl mx-auto">
+			<div class="text-center">
+				<div class="lg:col-span-1">
+					<h4 class="text-4xl font-semibold mt-4 mb-6">Sorry, this store is temporarily unavailable.</h4>
 
-			<div class="hidden lg:block mx-auto">
-				<ul class="navbar-nav flex gap-x-3 items-center justify-center">
-					<li class="nav-item">
-						<a class="nav-link" href="index.html">Home</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="pricing.html">Pricing</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="store-not-exist.html">Store Not Found</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="store-unavailable.html">Store Unavailable</a>
-					</li>
-				</ul>
+					<p class="text-sm">
+						This storefront exists, but it is temporarily unavailable. Use this state to keep the experience branded while the merchant finishes setup or resolves availability issues.
+					</p>
+
+					<div class="inline-flex mt-6">
+						<a
+								class="py-1 px-4 mr-2 rounded-full border border-primary bg-primary text-white hover:shadow-lg hover:shadow-primary/20 focus:outline focus:outline-primary/50 transition-all duration-500"
+								href="https://www.oricodes.com/" target="_blank"> Launch with Deewid
+							<i class="fa-solid fa-arrow-right ms-2"></i>
+						</a>
+					</div>
+				</div>
 			</div>
 
-			<div class="hidden lg:flex items-center ms-3">
-				<a class="px-4 py-2" href="https://www.oricodes.com/" target="_blank">Oricodes</a>
-
-				<a class="bg-secondary px-6 py-4 rounded inline-flex items-center text-sm"
-				   href="https://www.oricodes.com/"
-				   target="_blank">Launch with Deewid</a>
-			</div>
-
-			<div class="lg:hidden flex items-center ms-auto px-2.5">
-				<button data-fc-target="mobileMenu" data-fc-type="offcanvas" type="button">
-					<i class="fa-solid fa-bars text-2xl text-slate-700"></i>
-				</button>
-			</div>
-		</nav>
-	</div>
-</header>
-
-
-<div class="fc-offcanvas-open:translate-x-0 translate-x-full fixed top-0 end-0 transition-all duration-200 transform h-full w-full max-w-md z-50 bg-white border-s hidden"
-	 id="mobileMenu">
-	<div class="flex flex-col h-full divide-y-2 divide-gray-200">
-		<div class="p-6 flex items-center justify-between">
-			<a href="index.html">
-				<img alt="Logo" class="h-8" src="assets/images/logo-dark.png">
-			</a>
-
-			<button class="flex items-center px-2" data-fc-dismiss>
-				<i class="fa-solid fa-xmark text-xl"></i>
-			</button>
-		</div>
-
-		<div class="p-6 overflow-y-scroll h-full">
-			<ul class="navbar-nav flex flex-col gap-2" data-fc-type="accordion">
-				<li class="nav-item">
-					<a class="nav-link" href="index.html">Home</a>
-				</li>
-
-				<li class="nav-item">
-					<a class="nav-link" href="pricing.html">Pricing</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="store-not-exist.html">Store Not Found</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="store-unavailable.html">Store Unavailable</a>
-				</li>
-			</ul>
-		</div>
-
-		<div class="p-6 flex items-center justify-center">
-			<a class="bg-secondary w-full p-3 rounded flex items-center justify-center text-sm mr-2"
-			   href="https://www.oricodes.com/"
-			   target="_blank">Oricodes</a>
-			<a class="bg-secondary w-full p-3 rounded flex items-center justify-center text-sm"
-			   href="https://www.oricodes.com/"
-			   target="_blank">Launch with Deewid</a>
-		</div>
-	</div>
-</div>
-
-
-<section class="pt-36 pb-20 overflow-hidden">
-	<div class="container rounded-xl items-center relative py-16 sm:py-24 bg-light overflow-hidden text-center max-w-4xl">
-		<span class="text-sm bg-primary/10 text-primary rounded-full px-3 py-1">Store state</span>
-		<h1 class="text-4xl md:text-5xl font-semibold mt-4 mb-6">This store is temporarily unavailable</h1>
-		<p class="text-slate-500 max-w-2xl mx-auto">The storefront exists, but it is currently unavailable. This fallback page gives the public a cleaner status message while preserving Deewid branding and navigation.</p>
-		<div class="inline-flex mt-8 gap-4 flex-wrap justify-center">
-			<a class="py-3 px-6 rounded bg-secondary" href="index.html">Return to Deewid</a>
-			<a class="py-3 px-6 rounded border border-slate-300" href="pricing.html">Review plans</a>
 		</div>
 	</div>
 </section>
 
-<section class="pb-20">
-	<div class="container grid md:grid-cols-2 grid-cols-1 gap-6">
-		<div class="bg-light rounded-xl p-8"><h2 class="text-2xl font-medium mb-4">Owner context</h2><p class="text-slate-500">In the future Laravel flow, this state can be extended with owner-only recovery actions, domain checks, or maintenance messaging.</p></div>
-		<div class="bg-light rounded-xl p-8"><h2 class="text-2xl font-medium mb-4">Public context</h2><p class="text-slate-500">For visitors, it explains that the store is real but currently offline, instead of leaving them on a generic browser or server error page.</p></div>
-	</div>
-</section>
+<section class=" overflow-hidden">
+	<div class="container">
+		<div class="relative rounded p-12 bg-light overflow-hidden">
+			<div
+					class="pointer-events-none bg-secondary absolute -left-[90px] -top-[70px] z-[1] h-[250px] w-[200px] rounded-[500px]">
+			</div>
+			<div
+					class="pointer-events-none bg-secondary absolute -right-[30px] -bottom-[75px] z-[1] h-[250px] w-[200px] rounded-[450px]">
+			</div>
 
-﻿<footer class="relative">
-	<div class="container bg-light">
-		<div class="py-6 border-t">
-			<div class="text-center gap-6">
-				<p>
-					&copy;
-					<script>document.write(new Date().getFullYear())</script>
-					,
-					Open-source Deewid front-end maintained by <a class="text-slate-800 hover:text-primary transition-all" href="https://www.oricodes.com/">Oricodes</a>.
-				</p>
+			<div class="relative lg:flex block justify-center gap-8 place-items-center text-center z-[2]">
+				<div class="lg:w-1/2 bg-white rounded-xl py-8 px-6 my-8 shadow text-center place-self-center">
+					<h4 class="text-xl mt-2 mb-4">Are you the owner of this store?</h4>
+
+					<p class="text-sm text-colorCodGray/70 font-medium">
+						If you manage this storefront, review your Deewid configuration, reconnect your domain, and verify that your storefront has been published correctly before sending traffic back here.
+					</p>
+				</div>
+				<div class="lg:w-1/2 bg-white rounded-xl py-8 px-6 my-8 shadow text-center place-self-center">
+					<h4 class="text-xl mt-2 mb-4">Are you the store owner?</h4>
+
+					<p class="text-sm">
+						Complete the remaining setup steps in your Deewid admin space, confirm your domain mapping, and retry publication once your storefront configuration is ready.
+					</p>
+				</div>
 			</div>
 		</div>
 	</div>
-</footer>
+</section>
 
-<button class="fixed text-sm rounded-full z-10 bottom-5 end-5 h-9 w-9 text-center bg-primary/20 text-primary flex justify-center items-center"
-		data-toggle="back-to-top">
-	<i class="fa-solid fa-arrow-up text-base"></i>
-</button>
-<script src="assets/libs/@frostui/tailwindcss/frostui.js"></script>
 
-<script src="assets/libs/swiper/swiper-bundle.min.js"></script>
+<section class="mt-20 mb-10">
+	<div class="container">
+		<div class="relative text-center">
 
-<script src="assets/js/theme.min.js"></script>
+			<div class="inline-flex mt-6">
+				<a
+						class="text-sm font-medium py-1 px-6 mr-2 rounded-full shadow focus:outline focus:outline-primary/50 transition-all duration-500"
+						href="https://www.oricodes.com/" target="_blank"> Powered by Deewid
+					<i class="fa-solid fa-arrow-right ms-2"></i>
+				</a>
+			</div>
+		</div>
+	</div>
+</section>
 </body>
 </html>

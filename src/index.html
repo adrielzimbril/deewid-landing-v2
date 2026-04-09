@@ -1,32 +1,123 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
 <head>
-	@@include("partials/title-meta.html", {"title": "Landing V2"})
-	@@include('./partials/head-css.html')
+	<meta charset="utf-8"/>
+	<title>Deewid | Ecommerce Storefront Landing</title>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta content="Deewid is an ecommerce storefront platform focused on helping merchants launch branded online stores, manage sales communication, and present products clearly."
+		  name="description"/>
+	<meta content="Oricodes" name="author"/>
+
+	<link href="assets/images/favicon.ico" rel="shortcut icon">
+
+	<link href="assets/libs/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css">
+
+	<link href="assets/css/style.min.css" rel="stylesheet" type="text/css">
+
+	<link href="assets/css/icons.min.css" rel="stylesheet" type="text/css">
 </head>
+
 <body>
 
-@@include('./partials/navbar.html', {"link-color": "light"})
+<header class="light fixed top-0 inset-x-0 flex items-center z-40 w-full lg:bg-transparent bg-white transition-all py-5"
+		id="navbar">
+	<div class="container p-0">
+		<nav class="flex items-center">
+			<a href="index.html">
+				<img alt="Logo Dark" class="h-8 logo-dark" src="assets/images/logo-dark.png">
+				<img alt="Logo Light" class="h-8 logo-light" src="assets/images/logo-light.png">
+			</a>
 
-<section class="pt-36 pb-20">
+			<div class="hidden lg:block mx-auto">
+				<ul class="navbar-nav flex gap-x-3 items-center justify-center">
+					<li class="nav-item">
+						<a class="nav-link" href="index.html">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="pricing.html">Pricing</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="store-unavailable.html">Store State</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="hidden lg:flex items-center ms-3">
+				<a class="px-4 py-2" href="https://www.oricodes.com/" target="_blank">Oricodes</a>
+
+				<a class="bg-secondary px-6 py-4 rounded inline-flex items-center text-sm"
+				   href="https://www.oricodes.com/" target="_blank">Launch with Deewid</a>
+			</div>
+
+			<div class="lg:hidden flex items-center ms-auto px-2.5">
+				<button data-fc-target="mobileMenu" data-fc-type="offcanvas" type="button">
+					<i class="fa-solid fa-bars text-2xl text-slate-700"></i>
+				</button>
+			</div>
+		</nav>
+	</div>
+</header>
+
+
+<div class="fc-offcanvas-open:translate-x-0 translate-x-full fixed top-0 end-0 transition-all duration-200 transform h-full w-full max-w-md z-50 bg-white border-s hidden"
+	 id="mobileMenu">
+	<div class="flex flex-col h-full divide-y-2 divide-gray-200">
+		<div class="p-6 flex items-center justify-between">
+			<a href="index.html">
+				<img alt="Logo" class="h-8" src="assets/images/logo-dark.png">
+			</a>
+
+			<button class="flex items-center px-2" data-fc-dismiss>
+				<i class="fa-solid fa-xmark text-xl"></i>
+			</button>
+		</div>
+
+		<div class="p-6 overflow-y-scroll h-full">
+			<ul class="navbar-nav flex flex-col gap-2" data-fc-type="accordion">
+				<li class="nav-item">
+					<a class="nav-link" href="index.html">Home</a>
+				</li>
+
+				<li class="nav-item">
+					<a class="nav-link" href="pricing.html">Pricing</a>
+				</li>
+
+				<li class="nav-item">
+					<a class="nav-link" href="store-unavailable.html">Store State</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="p-6 flex items-center justify-center">
+			<a class="bg-secondary w-full p-3 rounded flex items-center justify-center text-sm mr-2"
+			   href="https://www.oricodes.com/" target="_blank">Oricodes</a>
+			<a class="bg-secondary w-full p-3 rounded flex items-center justify-center text-sm"
+			   href="https://www.oricodes.com/" target="_blank">Launch with Deewid</a>
+		</div>
+	</div>
+</div>
+
+<section class="pt-36 pb-24">
 	<div class="container lg:bg-light rounded-xl lg:py-20 py-10">
-		<div class="grid lg:grid-cols-6 grid-cols-1 justify-between items-center gap-8">
+		<div class="grid lg:grid-cols-6 grid-cols-1 justify-between items-center gap-6">
 			<div class="lg:order-1 order-2 lg:col-span-3">
-				<span class="text-sm bg-primary/10 text-primary rounded-full px-3 py-1">Deewid V2</span>
-				<h1 class="lg:text-7xl md:text-6xl text-4xl font-semibold lg:bg-gradient-to-b lg:from-primary lg:to-primary/70 lg:bg-clip-text lg:text-transparent text-primary mt-4 mb-7">
-					A more complete ecommerce front-end for Deewid
-				</h1>
-				<p class="text-slate-600 leading-7">
-					Deewid Landing V2 expands the first version with a richer presentation layer, a dedicated pricing page, and reusable storefront state pages for unavailable or missing shops.
-				</p>
-				<div class="flex flex-wrap items-center mt-6 gap-4">
-					<a class="py-3 px-6 rounded bg-secondary focus:outline focus:outline-primary/50" href="pricing.html">View pricing</a>
-					<a class="py-3 px-6 rounded border border-slate-300" href="store-unavailable.html">Store fallback pages</a>
+				<h2
+						class="lg:text-7xl md:text-6xl text-4xl font-semibold lg:bg-gradient-to-b lg:from-primary lg:to-primary/70 lg:bg-clip-text lg:text-transparent text-primary mb-7">
+					Start selling easily with an online store
+				</h2>
+				<p class="text-slate-600 leading-7">Welcome to Deewid, your all-in-one solution for creating a stunning and powerful ecommerce store. Empower your online business with our feature-rich platform designed to simplify the entire process.</p>
+
+				<div class="flex flex-wrap items-center mt-4 gap-6">
+					<a
+							class="py-3 px-6 rounded bg-secondary focus:outline focus:outline-primary/50"
+							href="https://www.oricodes.com/" target="_blank">Start with Deewid</a>
 				</div>
 			</div>
+
 			<div class="lg:order-2 order-first lg:col-span-3">
 				<div class="relative">
-					<img alt="Deewid storefront" src="assets/images/hero/hero.png">
+					<img alt="img" src="assets/images/hero/hero.png">
 				</div>
 			</div>
 		</div>
@@ -36,32 +127,61 @@
 <section class="py-6">
 	<div class="container">
 		<div class="text-center">
-			<span class="text-sm bg-primary/10 text-primary rounded-full px-3 py-1">Structure</span>
-			<h2 class="text-3xl/tight font-medium mt-3 mb-4">Built for storefront communication</h2>
-			<p class="text-slate-500 max-w-3xl mx-auto">
-				This version is designed for ecommerce teams that need clearer product storytelling, stronger pricing communication, and dedicated pages for edge cases around store access.
-			</p>
+			<div>
+				<div class="text-center">
+					<span class="text-sm bg-primary/10 text-primary rounded-full px-3 py-1">Ecommerce Ecosystem</span>
+					<h1 class="text-3xl/tight font-medium mt-3 mb-4">Built for familiar online buying patterns</h1>
+					<p class="text-slate-500">Deewid helps merchants structure a storefront experience customers already understand, from product discovery to checkout-ready calls to action.</p>
+				</div>
+
+				<div class="flex flex-wrap md:flex-nowrap justify-center gap-10 mt-14">
+					<div>
+						<img class="w-28" src="assets/images/brands/amazon.svg">
+					</div>
+					<div>
+						<img class="w-28" src="assets/images/brands/google.svg">
+					</div>
+					<div>
+						<img class="w-28" src="assets/images/brands/paypal.svg">
+					</div>
+					<div>
+						<img class="w-28" src="assets/images/brands/spotify.svg">
+					</div>
+					<div>
+						<img class="w-28" src="assets/images/brands/shopify.svg">
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </section>
 
 <section class="pt-16 sm:pt-24">
+
 	<div class="container rounded-[1.5rem] bg-light">
 		<div class="py-16 sm:py-20">
 			<div class="grid lg:grid-cols-2 grid-cols-1 2xl:gap-24 gap-10 items-center">
+
 				<div class="order-2 lg:order-1">
-					<span class="text-sm bg-primary/10 text-primary rounded-full px-3 py-1">Storefront</span>
-					<h2 class="text-5xl/tight font-medium mt-3 mb-4">Landing pages that stay conversion-focused</h2>
+					<span class="text-sm bg-primary/10 text-primary rounded-full px-3 py-1">Feature</span>
+					<h1 class="text-5xl/tight font-medium mt-3 mb-4">Build Stores Effortlessly</h1>
 					<p class="text-slate-500">
-						Use Deewid V2 to present your offer with cleaner hierarchy, stronger calls to action, and a structure that feels more production-ready than the first version.
+						Create a visually stunning online presence without the need for complex coding. Our intuitive drag-and-drop interface empowers you to design and customize your store exactly the way you envision it
 					</p>
 					<br>
 					<p class="text-slate-500">
-						It also includes dedicated storefront state pages so missing or unavailable stores still produce a branded experience instead of a dead end.
+						Choose from professionally structured storefront sections tailored to your catalog, your brand, and the way you want customers to discover your products.
 					</p>
+					<button class="mt-4 flex items-center">
+						<a
+								class="bg-primary text-white rounded font-semibold flex-none focus:outline focus:outline-primary/40 px-8 py-3 mt-4"
+								href="#">Learn more
+							<i class="fa-solid fa-arrow-right ms-2"></i></a>
+					</button>
 				</div>
+
 				<div class="order-1 lg:order-2">
-					<img alt="dashboard" src="assets/images/features/hero-dashboard-1.png">
+					<img src="assets/images/features/hero-dashboard-1.png">
 				</div>
 			</div>
 		</div>
@@ -69,17 +189,189 @@
 
 	<div class="container">
 		<div class="py-16 sm:py-20">
-			<div class="grid lg:grid-cols-7 grid-cols-1 items-center lg:gap-8 gap-6">
+			<div class="grid lg:grid-cols-7 grid-cols-1 items-center lg:gap-2 gap-6">
 				<div class="relative lg:col-span-3">
-					<img class="mx-auto" alt="analytics" src="assets/images/features/hero-dashboard.png">
+					<img class="mx-auto" src="assets/images/features/hero-dashboard.png">
 				</div>
-				<div class="lg:col-span-4 lg:ps-12">
-					<h2 class="text-5xl/tight font-medium mt-3 mb-6">Key capabilities in this version</h2>
+
+				<div class="lg:col-span-4 lg:ps-20">
+					<h1 class="text-5xl/tight font-medium mt-3 mb-4">Built for day-to-day ecommerce work</h1>
 					<div class="grid sm:grid-cols-2 grid-cols-1 gap-10">
-						<div><h4 class="text-base mt-3 mb-2">Richer landing structure</h4><p class="text-slate-500">More sections and better progression than V1.</p></div>
-						<div><h4 class="text-base mt-3 mb-2">Dedicated pricing page</h4><p class="text-slate-500">Separate pricing communication for clearer offer comparison.</p></div>
-						<div><h4 class="text-base mt-3 mb-2">Store state pages</h4><p class="text-slate-500">Branded fallbacks for missing or unavailable shops.</p></div>
-						<div><h4 class="text-base mt-3 mb-2">Reusable partials</h4><p class="text-slate-500">HTML partials keep the front-end easier to evolve.</p></div>
+
+						<div>
+							<span class="flex items-center justify-center rounded w-12 h-12 bg-white border-primary shadow">
+								<svg class="w-6 h-6 text-primary" version="1.1" viewBox="0 0 24 24"
+									 xmlns="http://www.w3.org/2000/svg">
+									<g fill="none" fill-rule="evenodd" stroke="none" stroke-width="1">
+										<rect height="24" id="bound" width="24" x="0" y="0"></rect>
+										<path d="M6,2 L18,2 C18.5522847,2 19,2.44771525 19,3 L19,12 C19,12.5522847 18.5522847,13 18,13 L6,13 C5.44771525,13 5,12.5522847 5,12 L5,3 C5,2.44771525 5.44771525,2 6,2 Z M7.5,5 C7.22385763,5 7,5.22385763 7,5.5 C7,5.77614237 7.22385763,6 7.5,6 L13.5,6 C13.7761424,6 14,5.77614237 14,5.5 C14,5.22385763 13.7761424,5 13.5,5 L7.5,5 Z M7.5,7 C7.22385763,7 7,7.22385763 7,7.5 C7,7.77614237 7.22385763,8 7.5,8 L10.5,8 C10.7761424,8 11,7.77614237 11,7.5 C11,7.22385763 10.7761424,7 10.5,7 L7.5,7 Z"
+											  fill="currentcolor" id="Combined-Shape" opacity="0.3"></path>
+										<path d="M3.79274528,6.57253826 L12,12.5 L20.2072547,6.57253826 C20.4311176,6.4108595 20.7436609,6.46126971 20.9053396,6.68513259 C20.9668779,6.77033951 21,6.87277228 21,6.97787787 L21,17 C21,18.1045695 20.1045695,19 19,19 L5,19 C3.8954305,19 3,18.1045695 3,17 L3,6.97787787 C3,6.70173549 3.22385763,6.47787787 3.5,6.47787787 C3.60510559,6.47787787 3.70753836,6.51099993 3.79274528,6.57253826 Z"
+											  fill="currentcolor " id="Combined-Shape"></path>
+									</g>
+								</svg>
+							</span>
+							<h4 class="text-base mt-3 mb-2">Campaign Integrations</h4>
+							<p class="text-slate-500">Connect launch campaigns, follow-up flows, and merchant communication around each product drop.</p>
+						</div>
+
+						<div>
+							<span class="flex items-center justify-center rounded w-12 h-12 bg-white border-primary shadow">
+								<svg class="w-6 h-6 text-primary" version="1.1" viewBox="0 0 24 24"
+									 xmlns="http://www.w3.org/2000/svg">
+									<g fill="none" fill-rule="evenodd" stroke="none" stroke-width="1">
+										<rect height="24" id="bound" width="24" x="0" y="0"></rect>
+										<path d="M4,4 L11.6314229,2.5691082 C11.8750185,2.52343403 12.1249815,2.52343403 12.3685771,2.5691082 L20,4 L20,13.2830094 C20,16.2173861 18.4883464,18.9447835 16,20.5 L12.5299989,22.6687507 C12.2057287,22.8714196 11.7942713,22.8714196 11.4700011,22.6687507 L8,20.5 C5.51165358,18.9447835 4,16.2173861 4,13.2830094 L4,4 Z"
+											  fill="currentcolor " id="Path-50" opacity="0.3"></path>
+										<path d="M11.1750002,14.75 C10.9354169,14.75 10.6958335,14.6541667 10.5041669,14.4625 L8.58750019,12.5458333 C8.20416686,12.1625 8.20416686,11.5875 8.58750019,11.2041667 C8.97083352,10.8208333 9.59375019,10.8208333 9.92916686,11.2041667 L11.1750002,12.45 L14.3375002,9.2875 C14.7208335,8.90416667 15.2958335,8.90416667 15.6791669,9.2875 C16.0625002,9.67083333 16.0625002,10.2458333 15.6791669,10.6291667 L11.8458335,14.4625 C11.6541669,14.6541667 11.4145835,14.75 11.1750002,14.75 Z"
+											  fill="currentcolor " id="check-path"></path>
+									</g>
+								</svg>
+							</span>
+							<h4 class="text-base mt-3 mb-2">Catalog Visibility</h4>
+							<p class="text-slate-500">Present collections and product pages clearly so your storefront performs better in search and social sharing.</p>
+						</div>
+
+						<div>
+							<span class="flex items-center justify-center rounded w-12 h-12 bg-white border-primary shadow">
+								<svg class="w-6 h-6 text-primary" version="1.1" viewBox="0 0 24 24"
+									 xmlns="http://www.w3.org/2000/svg">
+									<g fill="none" fill-rule="evenodd" stroke="none" stroke-width="1">
+										<rect height="24" id="Rectangle-10" width="24" x="0" y="0"></rect>
+										<path d="M16.3740377,19.9389434 L22.2226499,11.1660251 C22.4524142,10.8213786 22.3592838,10.3557266 22.0146373,10.1259623 C21.8914367,10.0438285 21.7466809,10 21.5986122,10 L17,10 L17,4.47708173 C17,4.06286817 16.6642136,3.72708173 16.25,3.72708173 C15.9992351,3.72708173 15.7650616,3.85240758 15.6259623,4.06105658 L9.7773501,12.8339749 C9.54758575,13.1786214 9.64071616,13.6442734 9.98536267,13.8740377 C10.1085633,13.9561715 10.2533191,14 10.4013878,14 L15,14 L15,19.5229183 C15,19.9371318 15.3357864,20.2729183 15.75,20.2729183 C16.0007649,20.2729183 16.2349384,20.1475924 16.3740377,19.9389434 Z"
+											  fill="currentcolor" id="Path-3"></path>
+										<path d="M4.5,5 L9.5,5 C10.3284271,5 11,5.67157288 11,6.5 C11,7.32842712 10.3284271,8 9.5,8 L4.5,8 C3.67157288,8 3,7.32842712 3,6.5 C3,5.67157288 3.67157288,5 4.5,5 Z M4.5,17 L9.5,17 C10.3284271,17 11,17.6715729 11,18.5 C11,19.3284271 10.3284271,20 9.5,20 L4.5,20 C3.67157288,20 3,19.3284271 3,18.5 C3,17.6715729 3.67157288,17 4.5,17 Z M2.5,11 L6.5,11 C7.32842712,11 8,11.6715729 8,12.5 C8,13.3284271 7.32842712,14 6.5,14 L2.5,14 C1.67157288,14 1,13.3284271 1,12.5 C1,11.6715729 1.67157288,11 2.5,11 Z"
+											  fill="currentcolor" id="Combined-Shape" opacity="0.3"></path>
+									</g>
+								</svg>
+							</span>
+							<h4 class="text-base mt-3 mb-2">Multi-Market Readiness</h4>
+							<p class="text-slate-500">Prepare your storefront for different audiences, currencies, and regional messaging without rebuilding everything.</p>
+						</div>
+
+						<div>
+							<span class="flex items-center justify-center rounded w-12 h-12 bg-white border-primary shadow">
+								<svg class="w-6 h-6 text-primary" version="1.1" viewBox="0 0 24 24"
+									 xmlns="http://www.w3.org/2000/svg">
+									<g fill="none" fill-rule="evenodd" stroke="none" stroke-width="1">
+										<rect height="24" id="bound" width="24" x="0" y="0"></rect>
+										<path d="M13.2070325,4 C13.0721672,4.47683179 13,4.97998812 13,5.5 C13,8.53756612 15.4624339,11 18.5,11 C19.0200119,11 19.5231682,10.9278328 20,10.7929675 L20,17 C20,18.6568542 18.6568542,20 17,20 L7,20 C5.34314575,20 4,18.6568542 4,17 L4,7 C4,5.34314575 5.34314575,4 7,4 L13.2070325,4 Z"
+											  fill="currentcolor " id="Combined-Shape"></path>
+										<circle cx="18.5" cy="5.5" fill="currentcolor " id="Oval" opacity="0.3"
+												r="2.5"></circle>
+									</g>
+								</svg>
+							</span>
+							<h4 class="text-base mt-3 mb-2">Flexible Pricing Rules</h4>
+							<p class="text-slate-500">Highlight offers, bundles, and pricing logic in a way that stays readable for shoppers and easy to maintain for merchants.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container rounded-[1.5rem] bg-light">
+		<div class="py-16 sm:py-20">
+			<div class="grid lg:grid-cols-2 grid-cols-1 2xl:gap-24 gap-10 items-center">
+
+				<div>
+					<img src="assets/images/features/hero-pos.png">
+				</div>
+
+				<div>
+					<span class="text-sm bg-primary/10 text-primary rounded-full px-3 py-1">Auto Sync</span>
+					<h1 class="text-5xl/tight font-medium mt-3 mb-4">AutoSync deployment</h1>
+					<p class="text-slate-500">Deewid helps merchants keep storefront content, campaigns, and launch operations aligned across their sales workflow.</p>
+
+					<div class="flex flex-col gap-5 mt-4 ml-2">
+						<h6 class="flex items-center gap-3 font-medium text-sm">
+							<svg class="h-5 w-5 text-primary" fill="none"
+								 stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+								 stroke-width="2"
+								 viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+								<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+								<polyline points="22 4 12 14.01 9 11.01"></polyline>
+							</svg>
+							Unlimited Campaigns
+						</h6>
+						<h6 class="flex items-center gap-3 font-medium text-sm">
+							<svg class="h-5 w-5 text-primary" fill="none"
+								 stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+								 stroke-width="2"
+								 viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+								<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+								<polyline points="22 4 12 14.01 9 11.01"></polyline>
+							</svg>
+							Detailed Reporting
+						</h6>
+						<h6 class="flex items-center gap-3 font-medium text-sm">
+							<svg class="h-5 w-5 text-primary" fill="none"
+								 stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+								 stroke-width="2"
+								 viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+								<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+								<polyline points="22 4 12 14.01 9 11.01"></polyline>
+							</svg>
+							Auto Schedule Tuning
+						</h6>
+						<h6 class="flex items-center gap-3 font-medium text-sm">
+							<svg class="h-5 w-5 text-primary" fill="none"
+								 stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+								 stroke-width="2"
+								 viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+								<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+								<polyline points="22 4 12 14.01 9 11.01"></polyline>
+							</svg>
+							Smart Analytics
+						</h6>
+						<h6 class="flex items-center gap-3 font-medium text-sm">
+							<svg class="h-5 w-5 text-primary" fill="none"
+								 stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+								 stroke-width="2"
+								 viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+								<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+								<polyline points="22 4 12 14.01 9 11.01"></polyline>
+							</svg>
+							Notifications
+						</h6>
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="pt-16 sm:pt-24 overflow-hidden">
+	<div class="container">
+		<div class="relative py-12 lg:px-12 px-4 bg-light overflow-hidden">
+			<div
+					class="pointer-events-none bg-secondary filter blur-2xl absolute -left-[90px] -top-[70px] z-[1] h-[250px] w-[200px] rounded-[500px]">
+			</div>
+			<div
+					class="pointer-events-none bg-secondary filter blur-2xl absolute -right-[30px] -bottom-[75px] z-[1] h-[250px] w-[200px] rounded-[450px]">
+			</div>
+
+			<div class="relative grid lg:grid-cols-7 grid-cols-1 items-center z-[2]">
+				<div class="lg:col-span-4">
+					<span class="text-sm bg-colorCodGray/10 rounded py-1 px-2">
+							Start for free, then get your first 3 months for $1/mo
+						</span>
+					<h4 class="text-5xl mt-2 mb-10">Everything you need to sell online, all in one place</h4>
+
+					<p class="text-slate-500">
+						Whether you are launching a new shop, refining your product presentation, or improving conversion messaging, Deewid gives you one clear storefront foundation.
+					</p>
+				</div>
+
+				<div class="lg:col-span-3 lg:text-end">
+					<div class="inline-flex mt-14">
+						<a
+								class="py-2 px-4 rounded border border-primary bg-primary text-white hover:shadow hover:shadow-primary/20 focus:outline focus:outline-primary/50 transition-all duration-500"
+								href="https://www.oricodes.com/" target="_blank"> Launch with Deewid
+							<i class="fa-solid fa-arrow-right ms-2"></i></a>
 					</div>
 				</div>
 			</div>
@@ -89,29 +381,258 @@
 
 <section class="py-16 sm:py-24">
 	<div class="container">
-		<div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
-			<div class="bg-light rounded-xl p-8"><span class="text-sm bg-primary/10 text-primary rounded-full px-3 py-1">Versioning</span><h3 class="text-2xl font-medium mt-4 mb-3">Connected to V1 and V3</h3><p class="text-slate-500">V2 sits between the lightweight landing in V1 and the future Laravel application in V3.</p></div>
-			<div class="bg-light rounded-xl p-8"><span class="text-sm bg-primary/10 text-primary rounded-full px-3 py-1">Fallbacks</span><h3 class="text-2xl font-medium mt-4 mb-3">Better edge-case UX</h3><p class="text-slate-500">Missing stores and temporarily unavailable stores still get dedicated public pages.</p></div>
-			<div class="bg-light rounded-xl p-8"><span class="text-sm bg-primary/10 text-primary rounded-full px-3 py-1">Publishing</span><h3 class="text-2xl font-medium mt-4 mb-3">Static-hosting friendly</h3><p class="text-slate-500">The project builds to plain static files, which keeps GitHub Pages deployment straightforward.</p></div>
+		<div class="text-center md:max-w-2xl mx-auto">
+			<h2 class="md:text-5xl text-xl font-semibold my-5">Redefining Online Selling with Cutting-Edge Features</h2>
+			<p class="text-slate-400 font-medium">Easily create a quick payment link for your products or services, sell within clicks, and
+				<span
+						class="text-primary">get paid quickly</span>.</p>
+		</div>
+
+		<div class="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 pt-14">
+			<div class="group">
+				<div class="p-6 rounded-lg bg-light">
+					<div
+							class="w-12 h-12 bg-primary/10 flex items-center justify-center rounded">
+						<svg class="w-8 h-8 text-primary" version="1.1" viewBox="0 0 24 24"
+							 xmlns="http://www.w3.org/2000/svg">
+							<g fill="none" fill-rule="evenodd" stroke="none" stroke-width="1">
+								<rect height="24" id="bound" width="24" x="0" y="0"></rect>
+								<path d="M12,10.9996338 C12.8356605,10.3719448 13.8743941,10 15,10 C17.7614237,10 20,12.2385763 20,15 C20,17.7614237 17.7614237,20 15,20 C13.8743941,20 12.8356605,19.6280552 12,19.0003662 C11.1643395,19.6280552 10.1256059,20 9,20 C6.23857625,20 4,17.7614237 4,15 C4,12.2385763 6.23857625,10 9,10 C10.1256059,10 11.1643395,10.3719448 12,10.9996338 Z M13.3336047,12.504354 C13.757474,13.2388026 14,14.0910788 14,15 C14,15.9088933 13.7574889,16.761145 13.3336438,17.4955783 C13.8188886,17.8206693 14.3938466,18 15,18 C16.6568542,18 18,16.6568542 18,15 C18,13.3431458 16.6568542,12 15,12 C14.3930587,12 13.8175971,12.18044 13.3336047,12.504354 Z"
+									  fill="currentcolor" id="Combined-Shape" opacity="0.3"></path>
+								<circle cx="12" cy="9" fill="currentcolor" id="Oval-14" r="5"></circle>
+							</g>
+						</svg>
+					</div>
+					<h4 class="text-2xl font-medium mt-6">Intuitive Design</h4>
+					<p class="text-slate-500 leading-6 mt-2">Build your dream store with a user-friendly
+															 drag-and-drop interface, no coding skills required.</p>
+				</div>
+			</div>
+
+			<div class="group">
+				<div class="p-6 rounded-lg bg-light">
+					<div
+							class="w-12 h-12 bg-primary/10 flex items-center justify-center rounded">
+						<svg class="w-8 h-8 text-primary" version="1.1" viewBox="0 0 24 24"
+							 xmlns="http://www.w3.org/2000/svg">
+							<g fill="none" fill-rule="evenodd" stroke="none" stroke-width="1">
+								<rect height="24" id="bound" width="24" x="0" y="0"></rect>
+								<path d="M6,9 L6,15 C6,16.6568542 7.34314575,18 9,18 L15,18 L15,18.8181818 C15,20.2324881 14.2324881,21 12.8181818,21 L5.18181818,21 C3.76751186,21 3,20.2324881 3,18.8181818 L3,11.1818182 C3,9.76751186 3.76751186,9 5.18181818,9 L6,9 Z"
+									  fill="currentcolor" id="Combined-Shape"></path>
+								<path d="M10.1818182,4 L17.8181818,4 C19.2324881,4 20,4.76751186 20,6.18181818 L20,13.8181818 C20,15.2324881 19.2324881,16 17.8181818,16 L10.1818182,16 C8.76751186,16 8,15.2324881 8,13.8181818 L8,6.18181818 C8,4.76751186 8.76751186,4 10.1818182,4 Z"
+									  fill="currentcolor" id="Rectangle-19-Copy-3" opacity="0.3"></path>
+							</g>
+						</svg>
+					</div>
+					<h4 class="text-2xl font-medium mt-6">Secure Hosting</h4>
+					<p class="text-slate-500 leading-6 mt-2">Trust in our secure and reliable hosting to keep your
+															 online store safe and stable.</p>
+				</div>
+			</div>
+
+			<div class="group">
+				<div class="p-6 rounded-lg bg-light">
+					<div
+							class="w-12 h-12 bg-primary/10 flex items-center justify-center rounded">
+						<svg class="w-8 h-8 text-primary" version="1.1" viewBox="0 0 24 24"
+							 xmlns="http://www.w3.org/2000/svg">
+							<g fill="none" fill-rule="evenodd" stroke="none" stroke-width="1">
+								<polygon id="Shape" points="0 0 24 0 24 24 0 24"></polygon>
+								<path d="M6,5 L18,5 C19.6568542,5 21,6.34314575 21,8 L21,17 C21,18.6568542 19.6568542,20 18,20 L6,20 C4.34314575,20 3,18.6568542 3,17 L3,8 C3,6.34314575 4.34314575,5 6,5 Z M5,17 L14,17 L9.5,11 L5,17 Z M16,14 C17.6568542,14 19,12.6568542 19,11 C19,9.34314575 17.6568542,8 16,8 C14.3431458,8 13,9.34314575 13,11 C13,12.6568542 14.3431458,14 16,14 Z"
+									  fill="currentcolor" id="Rectangle-25"></path>
+							</g>
+						</svg>
+					</div>
+					<h4 class="text-2xl font-medium mt-6">Integrated Payments</h4>
+					<p class="text-slate-500 leading-6 mt-2">Simplify transactions with our integrated payment
+															 gateways, ensuring secure and smooth checkouts.</p>
+				</div>
+			</div>
+
+			<div class="group">
+				<div class="p-6 rounded-lg bg-light">
+					<div
+							class="w-12 h-12 bg-primary/10 flex items-center justify-center rounded">
+						<svg class="w-8 h-8 text-primary" version="1.1" viewBox="0 0 24 24"
+							 xmlns="http://www.w3.org/2000/svg">
+							<g fill="none" fill-rule="evenodd" stroke="none" stroke-width="1">
+								<rect height="24" id="bound" width="24" x="0" y="0"></rect>
+								<path d="M12,10.9996338 C12.8356605,10.3719448 13.8743941,10 15,10 C17.7614237,10 20,12.2385763 20,15 C20,17.7614237 17.7614237,20 15,20 C13.8743941,20 12.8356605,19.6280552 12,19.0003662 C11.1643395,19.6280552 10.1256059,20 9,20 C6.23857625,20 4,17.7614237 4,15 C4,12.2385763 6.23857625,10 9,10 C10.1256059,10 11.1643395,10.3719448 12,10.9996338 Z M13.3336047,12.504354 C13.757474,13.2388026 14,14.0910788 14,15 C14,15.9088933 13.7574889,16.761145 13.3336438,17.4955783 C13.8188886,17.8206693 14.3938466,18 15,18 C16.6568542,18 18,16.6568542 18,15 C18,13.3431458 16.6568542,12 15,12 C14.3930587,12 13.8175971,12.18044 13.3336047,12.504354 Z"
+									  fill="currentcolor" id="Combined-Shape" opacity="0.3"></path>
+								<circle cx="12" cy="9" fill="currentcolor" id="Oval-14" r="5"></circle>
+							</g>
+						</svg>
+					</div>
+					<h4 class="text-2xl font-medium mt-6">Beautiful Templates</h4>
+					<p class="text-slate-500 leading-6 mt-2">Choose from a variety of professionally crafted
+															 storefront sections tailored to your industry, helping your brand stand out from the first visit.</p>
+				</div>
+			</div>
+
+			<div class="group">
+				<div class="p-6 rounded-lg bg-light">
+					<div
+							class="w-12 h-12 bg-primary/10 flex items-center justify-center rounded">
+						<svg class="w-8 h-8 text-primary" version="1.1" viewBox="0 0 24 24"
+							 xmlns="http://www.w3.org/2000/svg">
+							<g fill="none" fill-rule="evenodd" stroke="none" stroke-width="1">
+								<rect height="24" id="bound" width="24" x="0" y="0"></rect>
+								<path d="M6,9 L6,15 C6,16.6568542 7.34314575,18 9,18 L15,18 L15,18.8181818 C15,20.2324881 14.2324881,21 12.8181818,21 L5.18181818,21 C3.76751186,21 3,20.2324881 3,18.8181818 L3,11.1818182 C3,9.76751186 3.76751186,9 5.18181818,9 L6,9 Z"
+									  fill="currentcolor" id="Combined-Shape"></path>
+								<path d="M10.1818182,4 L17.8181818,4 C19.2324881,4 20,4.76751186 20,6.18181818 L20,13.8181818 C20,15.2324881 19.2324881,16 17.8181818,16 L10.1818182,16 C8.76751186,16 8,15.2324881 8,13.8181818 L8,6.18181818 C8,4.76751186 8.76751186,4 10.1818182,4 Z"
+									  fill="currentcolor" id="Rectangle-19-Copy-3" opacity="0.3"></path>
+							</g>
+						</svg>
+					</div>
+					<h4 class="text-2xl font-medium mt-6">Real-Time Analytics</h4>
+					<p class="text-slate-500 leading-6 mt-2">Gain valuable insights into your store's performance
+															 with our comprehensive analytics dashboard.</p>
+				</div>
+			</div>
+
+			<div class="group">
+				<div class="p-6 rounded-lg bg-light">
+					<div
+							class="w-12 h-12 bg-primary/10 flex items-center justify-center rounded">
+						<svg class="w-8 h-8 text-primary" version="1.1" viewBox="0 0 24 24"
+							 xmlns="http://www.w3.org/2000/svg">
+							<g fill="none" fill-rule="evenodd" stroke="none" stroke-width="1">
+								<polygon id="Shape" points="0 0 24 0 24 24 0 24"></polygon>
+								<path d="M6,5 L18,5 C19.6568542,5 21,6.34314575 21,8 L21,17 C21,18.6568542 19.6568542,20 18,20 L6,20 C4.34314575,20 3,18.6568542 3,17 L3,8 C3,6.34314575 4.34314575,5 6,5 Z M5,17 L14,17 L9.5,11 L5,17 Z M16,14 C17.6568542,14 19,12.6568542 19,11 C19,9.34314575 17.6568542,8 16,8 C14.3431458,8 13,9.34314575 13,11 C13,12.6568542 14.3431458,14 16,14 Z"
+									  fill="currentcolor" id="Rectangle-25"></path>
+							</g>
+						</svg>
+					</div>
+					<h4 class="text-2xl font-medium mt-6">Mobile Optimization</h4>
+					<p class="text-slate-500 leading-6 mt-2">Reach customers on the go with a mobile-optimized store
+															 for a seamless shopping experience.</p>
+				</div>
+			</div>
 		</div>
 	</div>
 </section>
 
-<section class="py-16 sm:py-24">
-	<div class="container bg-light rounded-xl p-10 text-center">
-		<span class="text-sm bg-primary/10 text-primary rounded-full px-3 py-1">Next steps</span>
-		<h2 class="text-4xl/tight font-medium mt-3 mb-4">Explore the full Deewid V2 surface</h2>
-		<p class="text-slate-500 max-w-2xl mx-auto">Review the pricing page and the two store-state pages that will later inform the Laravel version.</p>
-		<div class="flex flex-wrap justify-center gap-4 mt-6">
-			<a class="py-3 px-6 rounded bg-secondary" href="pricing.html">Pricing</a>
-			<a class="py-3 px-6 rounded border border-slate-300" href="store-not-exist.html">Store not found</a>
-			<a class="py-3 px-6 rounded border border-slate-300" href="store-unavailable.html">Store unavailable</a>
+<section class="py-10">
+	<div class="container">
+		<div class="text-center">
+			<span class="text-sm font-medium py-1 px-3 rounded-full text-primary bg-primary/10">Blog</span>
+			<h1 class="text-3xl font-medium my-3">Useful Reading</h1>
+		</div>
+
+		<div class="grid lg:grid-cols-3 grid-cols-1 gap-5 mt-12">
+			<div class="relative">
+				<div class="relative">
+					<div class="absolute end-4 top-3">
+						<span class="px-3 py-1 text-sm font-medium text-white rounded bg-primary">Announcement</span>
+					</div>
+					<img class="rounded" src="assets/images/blog/blog-1.png">
+				</div>
+				<p class="text-slate-500 mt-5">May 19 2020 . 5 min read</p>
+				<h4 class="mt-1 text-lg">
+					<a href="#">Introducing blazzing fast new user interface</a>
+				</h4>
+			</div>
+
+			<div class="relative">
+				<div class="relative">
+					<div class="absolute end-4 top-3">
+						<span class="px-3 py-1 text-sm font-medium text-white rounded bg-primary">Bitcoin</span>
+					</div>
+					<img class="rounded" src="assets/images/blog/blog-3.png">
+				</div>
+				<p class="text-slate-500 mt-5">May 18 2020 . 8 min read</p>
+				<h4 class="mt-1 text-lg">
+					<a href="#">What you should know before buying bitcoin</a>
+				</h4>
+			</div>
+
+			<div class="relative">
+				<div class="relative">
+					<div class="absolute end-4 top-3">
+						<span class="px-3 py-1 text-sm font-medium text-white rounded bg-primary">Event</span>
+					</div>
+					<img class="rounded" src="assets/images/blog/blog-2.png">
+				</div>
+				<p class="text-slate-500 mt-5">May 13 2020 . 2 min read</p>
+				<h4 class="mt-1 text-lg">
+					<a href="#">A biggest crypto event to attend this month</a>
+				</h4>
+			</div>
 		</div>
 	</div>
 </section>
 
-@@include('./partials/footer.html')
-@@include('./partials/back-to-top.html')
-@@include('./partials/footer-scripts.html')
+<section
+		class="pt-16 sm:pt-24 overflow-hidden">
+
+	<div class="container items-center relative py-16 sm:py-24 bg-light overflow-hidden">
+		<div
+				class="pointer-events-none bg-gradient-to-r from-primary to-primary/80 filter blur-3xl absolute -left-[70px] -top-[120px] h-[450px] w-[400px] rounded-[500px]">
+		</div>
+		<div
+				class="pointer-events-none bg-gradient-to-l from-primary to-primary/80 filter blur-3xl absolute -right-[180px] -bottom-[150px] h-[450px] w-[500px] rounded-[450px]">
+		</div>
+		<div class="relative max-w-3xl mx-auto">
+			<div class="text-center">
+				<div class="lg:col-span-1">
+					<h4 class="text-6xl font-semibold mb-10">Everything you need to sell online, all in one place</h4>
+
+					<p class="text-lg font-medium">
+						Whether you are launching a new shop, refining your product presentation, or improving conversion messaging, Deewid gives you one clear storefront foundation.
+					</p>
+
+					<div class="inline-flex mt-6">
+						<a
+								class="py-2 px-4 rounded border border-primary bg-primary text-white hover:shadow-lg hover:shadow-primary/20 focus:outline focus:outline-primary/50 transition-all duration-500"
+								href="https://www.oricodes.com/" target="_blank"> Launch with Deewid
+							<i class="fa-solid fa-arrow-right ms-2"></i></a>
+					</div>
+
+					<div class="mt-4">
+						<span class="text-sm bg-colorCodGray/10 rounded py-1 px-2">
+							Start for free, then get your first 3 months for $1/mo
+						</span>
+						<p class="text-md">
+							Need a tailored setup? Contact Oricodes to turn this storefront direction into a production-ready Deewid experience.
+						</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>
+
+
+<footer class="relative">
+	<div class="container bg-light">
+		<div class="py-6 border-t">
+			<div class="text-center gap-6">
+				<p>
+					Â©
+					<script>document.write(new Date().getFullYear())</script>
+					,
+					Maintained by <a class="text-slate-800 hover:text-primary transition-all" href="https://www.oricodes.com/" target="_blank">Oricodes</a> for Deewid - All rights
+					reserved.
+				</p>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<button class="fixed text-sm rounded-full z-10 bottom-5 end-5 h-9 w-9 text-center bg-primary/20 text-primary flex justify-center items-center"
+		data-toggle="back-to-top">
+	<i class="fa-solid fa-arrow-up text-base"></i>
+</button>
+
+<script src="assets/libs/@frostui/tailwindcss/frostui.js"></script>
+
+<script src="assets/libs/swiper/swiper-bundle.min.js"></script>
+
+<script src="assets/js/theme.min.js"></script>
+
 </body>
+
 </html>
+
+
