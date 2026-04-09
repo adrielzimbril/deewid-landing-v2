@@ -63,3 +63,4 @@ Projet maintenu par Oricodes.
 ## Licence
 
 MIT. Voir `LICENSE`.
+
